@@ -38,7 +38,7 @@ export function Header() {
           className="flex items-center gap-3"
           aria-label={`${SITE.name} home`}
         >
-          <span className="relative block h-14 w-44 shrink-0 sm:h-16 sm:w-52 lg:h-[4.5rem] lg:w-60">
+          <span className="relative block h-16 w-52 shrink-0 sm:h-[4.5rem] sm:w-60 lg:h-20 lg:w-72">
             <Image
               src="/images/logo/spotless-logo.jpg"
               alt=""

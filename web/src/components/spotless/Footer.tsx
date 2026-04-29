@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-neutral-950/90 py-14 text-zinc-300 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
-          <span className="relative block h-16 w-52 shrink-0 sm:h-[4.5rem] sm:w-60">
+          <span className="relative block h-[4.5rem] w-60 shrink-0 sm:h-20 sm:w-72">
             <Image
               src="/images/logo/spotless-logo.jpg"
               alt=""

@@ -52,7 +52,7 @@ export function Gallery() {
         </div>
 
         {featured && (
-          <div className="mt-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+          <div className="mt-10 grid gap-10 lg:grid-cols-[1.3fr_0.7fr] lg:items-start">
             <Reveal>
               <BeforeAfterSlider
                 beforeSrc={featured.beforeSrc}

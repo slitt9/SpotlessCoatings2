@@ -52,7 +52,7 @@ export function BeforeAfterSlider({
         role="img"
         aria-label={`Before and after comparison. Slider at ${pct} percent.`}
       >
-        <div className="relative aspect-[4/3] w-full md:aspect-[16/10]">
+        <div className="relative aspect-[5/4] w-full sm:aspect-[4/3] lg:aspect-[16/10]">
           <Image
             src={afterSrc}
             alt={afterAlt}
@@ -76,13 +76,6 @@ export function BeforeAfterSlider({
             className="pointer-events-none absolute inset-y-0 w-px bg-white/90 shadow-[0_0_24px_rgba(0,0,0,0.45)]"
             style={{ left: `${pct}%`, transform: "translateX(-50%)" }}
           />
-          <div
-            className="pointer-events-none absolute top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-black/75 text-[10px] font-bold tracking-widest text-white backdrop-blur-md"
-            style={{ left: `${pct}%` }}
-            aria-hidden
-          >
-            
-          </div>
           <div className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/90 backdrop-blur">
             Before
           </div>
@@ -101,7 +94,7 @@ export function BeforeAfterSlider({
         max={100}
         value={pct}
         onChange={(e) => setPct(Number(e.target.value))}
-        className="mt-3 h-2 w-full cursor-ew-resize accent-zinc-100"
+        className="mt-4 h-3 w-full cursor-ew-resize accent-zinc-100"
         aria-valuetext={`${pct} percent before visible`}
       />
     </div>
