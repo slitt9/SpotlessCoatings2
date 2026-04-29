@@ -81,7 +81,7 @@ export function BeforeAfterSlider({
             style={{ left: `${pct}%` }}
             aria-hidden
           >
-            DRAG
+            
           </div>
           <div className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/90 backdrop-blur">
             Before
