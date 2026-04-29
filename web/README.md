@@ -51,7 +51,15 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Vercel
 
-This repo keeps the Next app under **`web/`**. In the Vercel project: **Settings → General → Root Directory** set to **`web`**, then redeploy. If Root Directory stays the repo root, the deployment will not run this app correctly and you can see `NOT_FOUND` or missing assets.
+The Next.js app lives in **`web/`** (next to `assets/` and `flakes/`).
+
+**Recommended (simplest):** Vercel **Root Directory** = **`web`**. Framework **Next.js** (auto). Clear any custom **Output Directory** (must **not** be `public` for Next). Install/build can stay default.
+
+**If Root Directory stays empty (`./`):** The repo root **`vercel.json`** runs install/build against **`web/`** via `npm install --prefix web` and `npm run build --prefix web`. Still set framework to **Next.js** if the UI offers it, and **do not** set Output Directory to `public`.
+
+The **LF/CRLF** lines from `git add` on Windows are normal line-ending hints, not errors.
+
+This site is one route `/` with section hashes; **`src/middleware.ts`** redirects paths like `/services` → `/#services` for direct links.
 
 ## Scripts
 
