@@ -49,6 +49,24 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+### Contact form
+
+The quote form submits to `POST /api/contact` and sends mail through SMTP.
+
+For local development, copy `.env.example` to `.env.local` and fill in a valid SMTP account.
+
+For Vercel, add these Environment Variables in the project settings for the `web` app:
+
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_SECURE`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `SMTP_FROM_EMAIL`
+- `CONTACT_TO_EMAIL`
+
+If you use Gmail, `SMTP_USER` is the Gmail address and `SMTP_PASS` must be a Google App Password, not the normal account password.
+
 ## Vercel
 
 Your GitHub repo has **two sibling folders** at the top level: **`web`** (the Next.js site) and **`assets` / `flakes`** (source media). **Only `web` is deployed to Vercel** — the rest is not part of the Node build. Think of **`web`** as “the actual website project,” not a second app.
