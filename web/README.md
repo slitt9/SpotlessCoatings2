@@ -49,6 +49,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Vercel
+
+This repo keeps the Next app under **`web/`**. In the Vercel project: **Settings → General → Root Directory** set to **`web`**, then redeploy. If Root Directory stays the repo root, the deployment will not run this app correctly and you can see `NOT_FOUND` or missing assets.
+
 ## Scripts
 
 | Command       | Description              |

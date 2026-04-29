@@ -18,6 +18,10 @@ const sans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://spotlesscoatings.ca"),
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
   title: {
     default: `${SITE.name} | Premium Epoxy & Polyaspartic Floors | Vancouver`,
     template: `%s | ${SITE.name}`,
