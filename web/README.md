@@ -51,13 +51,15 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Vercel
 
-The Next.js app lives in **`web/`** (next to `assets/` and `flakes/`).
+Your GitHub repo has **two sibling folders** at the top level: **`web`** (the Next.js site) and **`assets` / `flakes`** (source media). **Only `web` is deployed to Vercel** — the rest is not part of the Node build. Think of **`web`** as “the actual website project,” not a second app.
 
-**Recommended (simplest):** Vercel **Root Directory** = **`web`**. Framework **Next.js** (auto). Clear any custom **Output Directory** (must **not** be `public` for Next). Install/build can stay default.
+**Use exactly this in Vercel (Project → Settings → General):**
 
-**If Root Directory stays empty (`./`):** The repo root **`vercel.json`** runs install/build against **`web/`** via `npm install --prefix web` and `npm run build --prefix web`. Still set framework to **Next.js** if the UI offers it, and **do not** set Output Directory to `public`.
-
-The **LF/CRLF** lines from `git add` on Windows are normal line-ending hints, not errors.
+1. **Root Directory:** type **`web`** and save. Vercel will then run every command **from inside that folder** (where `package.json` and `next.config.ts` live).
+2. **Framework preset:** **Next.js** (or leave on Auto after step 1).
+3. **Install Command / Build Command:** leave **empty** (defaults = `npm install` and `npm run build` in `web`).  
+   **Do not** set `cd web && …` here — that only makes sense when the root is the **repo** folder. If Root is already **`web`**, then `cd web` tries to open a folder that does not exist → **build exits with 1**.
+4. **Output Directory:** leave **empty** (not `public`).
 
 This site is one route `/` with section hashes; **`src/middleware.ts`** redirects paths like `/services` → `/#services` for direct links.
 
